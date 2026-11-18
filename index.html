@@ -6,26 +6,31 @@
     <title>فروشگاه دنیای کوچولوها | لباس کودک</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- نوار اطلاع‌رسانی -->
     <div class="announcement">
-      🎉 ارسال رایگان برای خریدهای بالای ۱ میلیون تومان
+      🎉 ارسال رایگان برای خریدهای ۱ میلیون تومان و بیشتر
     </div>
 
-    <!-- هدر سایت -->
+    <!-- هدر -->
     <header class="header">
       <div class="logo">🧸 کوچولو استایل</div>
-      <nav class="nav">
-        <a href="#">خانه</a>
+
+      <nav class="nav" aria-label="دسته‌بندی محصولات">
+        <a href="#products">خانه</a>
         <a href="#baby">نوزادی</a>
         <a href="#girls">دخترانه</a>
         <a href="#boys">پسرانه</a>
         <a href="#offers">تخفیف‌ها</a>
       </nav>
-      <div class="cart-btn">🛍️ سبد خرید (۰)</div>
+
+      <button type="button" class="cart-btn" id="openCartBtn">
+        🛍️ سبد خرید (۰)
+      </button>
     </header>
 
-    <!-- بنر تبلیغاتی اصلی -->
+    <!-- بنر -->
     <section class="promo-banner">
       <div class="promo-content">
         <span class="promo-label">جشنواره کوچولوها 🎈</span>
@@ -36,17 +41,22 @@
         </p>
         <a href="#products" class="promo-button">دیدن محصولات</a>
       </div>
+
       <div class="promo-visual">
         <img src="image/44.jpg" alt="لباس رنگی کودک" />
       </div>
     </section>
 
-    <!-- بخش محبوب‌ترین‌ها -->
+    <!-- محبوب‌ترین محصولات -->
     <section class="products-section" id="products">
       <h2>محبوب‌ترین لباس‌های این فصل</h2>
+
       <div class="product-grid">
-        <!-- محصول ۱ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ ماه|۶ تا ۹ ماه"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">تخفیف ویژه</span>
           <div class="product-img-box">
             <img src="image/3.webp" alt="سرهمی نوزادی" />
@@ -54,32 +64,28 @@
           <h3>سرهمی پنبه‌ای خرسی</h3>
           <p class="size">رده سنی: ۳ تا ۹ ماه</p>
           <div class="price">۸۴۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۲ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۲ تا ۵ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <div class="product-img-box">
-            <img src="image/2.webp" alt="لباس دخترانه" />
+            <img src="image/2.webp" alt="بلوز و شلوار پسرانه" />
           </div>
           <h3>بلوز و شلوار پسرانه</h3>
           <p class="size">رده سنی: ۲ تا ۵ سال</p>
           <div class="price">۹۵۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۳ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">پرفروش</span>
           <div class="product-img-box">
             <img src="image/1.webp" alt="لباس پسرانه اسپرت" />
@@ -87,32 +93,28 @@
           <h3>بلوز و شلوار اسپرت</h3>
           <p class="size">سایز: ۳ تا ۶ سال</p>
           <div class="price">۱,۳۸۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۴ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۰ تا ۶ ماه"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <div class="product-img-box">
             <img src="image/22.jfif" alt="کفش و پاپوش نوزاد" />
           </div>
           <h3>پاپوش نوزادی هاپو</h3>
           <p class="size">سایز: ۰ تا ۶ ماه</p>
           <div class="price">۳۶۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۵ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">پرفروش</span>
           <div class="product-img-box">
             <img src="image/560x560.webp" alt="ست بلوز و دامن دخترانه" />
@@ -120,58 +122,57 @@
           <h3>بلوز و دامن دخترانه ۳ تیکه</h3>
           <p class="size">سایز: ۳ تا ۶ سال</p>
           <div class="price">۱,۴۶۵,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
       </div>
     </section>
 
-    <!-- ================= بخش نوزادی ================= -->
+    <!-- نوزادی -->
     <section class="products-section" id="baby">
       <h2>🍼 لباس‌های نوزادی (نرم و ضدحساسیت)</h2>
+
       <div class="product-grid">
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ ماه|۶ تا ۹ ماه"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">تخفیف ویژه</span>
           <div class="product-img-box">
-            <img src="image/shn1.jpg " alt="سرهمی نوزادی" />
+            <img src="image/shn1.jpg" alt="سرهمی نوزادی" />
           </div>
           <h3>سرهمی پنبه‌ای</h3>
           <p class="size">رده سنی: ۳ تا ۹ ماه</p>
           <div class="price">۳۴۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۱۸ تا ۲۲"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <div class="product-img-box">
             <img src="image/kn3.webp" alt="پاپوش نوزاد" />
           </div>
           <h3>پاپوش نرم ضدلغزش</h3>
           <p class="size">سایز: ۱۸ تا ۲۲</p>
           <div class="price">۲۱۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
       </div>
     </section>
 
-    <!-- ================= بخش دخترانه ================= -->
+    <!-- دخترانه -->
     <section class="products-section" id="girls">
       <h2>🌸 لباس‌های دخترانه (رنگی و شاد)</h2>
+
       <div class="product-grid">
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۲ تا ۵ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">پرفروش</span>
           <div class="product-img-box">
             <img src="image/pd5.jpg" alt="لباس دخترانه" />
@@ -179,21 +180,21 @@
           <h3>پیراهن چین‌دار بهاره</h3>
           <p class="size">رده سنی: ۲ تا ۵ سال</p>
           <div class="price">۴۵۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
       </div>
     </section>
 
-    <!-- ================= بخش پسرانه ================= -->
+    <!-- پسرانه -->
     <section class="products-section" id="boys">
       <h2>⚽ لباس‌های پسرانه (اسپرت و راحت)</h2>
+
       <div class="product-grid">
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">جدید</span>
           <div class="product-img-box">
             <img src="image/p3.jfif" alt="لباس پسرانه اسپرت" />
@@ -201,62 +202,57 @@
           <h3>بلوز و شلوار اسپرت</h3>
           <p class="size">سایز: ۳ تا ۶ سال</p>
           <div class="price">۳۸۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
       </div>
     </section>
 
-    <!-- نوار پیشنهاد ویژه -->
+    <!-- پیشنهاد ویژه -->
     <section class="offer-strip">
       <span>🌈 پیشنهاد این هفته</span>
       <strong>۱۰٪ تخفیف برای اولین خرید</strong>
       <span>کد تخفیف: <b>KOCHOLU10</b></span>
     </section>
 
-    <!-- ================= بخش تخفیف‌ها ================= -->
+    <!-- محصولات تخفیف‌دار -->
     <section class="products-section" id="offers">
       <h2>🔥 محصولات دارای تخفیف ویژه</h2>
+
       <div class="product-grid">
-        <!-- محصول ۱ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ ماه|۶ تا ۹ ماه"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">تخفیف ویژه</span>
           <div class="product-img-box">
-            <img src="image/3.webp" alt="سرهمی پنبه‌ای خرس" />
+            <img src="image/3.webp" alt="سرهمی پنبه‌ای خرسی" />
           </div>
           <h3>سرهمی پنبه‌ای خرسی</h3>
           <p class="size">رده سنی: ۳ تا ۹ ماه</p>
           <div class="price">۳۴۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۲ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۲ تا ۵ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <div class="product-img-box">
             <img src="image/7.webp" alt="لباس دخترانه" />
           </div>
           <h3>سه تیکه مخمل کبریتی دخترانه ۱ تا ۸ سال</h3>
           <p class="size">رده سنی: ۲ تا ۵ سال</p>
           <div class="price">۴۵۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۳ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۳ تا ۶ سال"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <span class="badge">پرفروش</span>
           <div class="product-img-box">
             <img src="image/12.webp" alt="ست کت و سارافون" />
@@ -264,85 +260,89 @@
           <h3>کت و سارافون دخترانه</h3>
           <p class="size">سایز: ۳ تا ۶ سال</p>
           <div class="price">۱,۳۰۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
 
-        <!-- محصول ۴ -->
-        <div class="product-card">
+        <article
+          class="product-card"
+          data-sizes="۰ تا ۶ ماه"
+          data-colors="آبی|قرمز|طوسی"
+        >
           <div class="product-img-box">
             <img src="image/13.webp" alt="کفش و پاپوش نوزاد" />
           </div>
           <h3>پاپوش نرم ضدلغزش</h3>
           <p class="size">سایز: ۰ تا ۶ ماه</p>
           <div class="price">۸۱۰,۰۰۰ تومان</div>
-          <button
-            class="add-to-cart"
-            onclick="alert('محصول به سبد خرید اضافه شد! 🛒')"
-          >
-            افزودن به سبد
-          </button>
-        </div>
+          <button type="button" class="add-to-cart">افزودن به سبد</button>
+        </article>
       </div>
     </section>
-    <!-- ================= مودال سبد خرید و تسویه حساب ================= -->
-    <div id="cartModal" class="cart-modal">
-      <div class="cart-modal-content">
+
+    <!-- سبد خرید -->
+    <div id="cartModal" class="cart-modal" aria-hidden="true">
+      <div
+        class="cart-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cartTitle"
+      >
         <div class="cart-header">
-          <h3>🛍️ سبد خرید شما</h3>
-          <span class="close-cart" onclick="toggleCart()">&times;</span>
+          <h3 id="cartTitle">🛍️ سبد خرید شما</h3>
+          <button
+            type="button"
+            class="close-cart"
+            id="closeCartBtn"
+            aria-label="بستن سبد خرید"
+          >
+            &times;
+          </button>
         </div>
 
-        <!-- لیست اقلام اضافه شده -->
-        <div id="cartItemsContainer" class="cart-items">
-          <!-- اقلام با جاوااسکریپت اینجا درج میشن -->
-        </div>
+        <div id="cartItemsContainer" class="cart-items"></div>
 
-        <!-- فاکتور و فرم مشخصات -->
         <div id="checkoutSection" class="checkout-section">
           <div class="cart-summary">
             <div class="summary-row">
               <span>مجموع خرید:</span>
               <span id="subtotalPrice">۰ تومان</span>
             </div>
+
             <div class="summary-row">
               <span>هزینه ارسال (پست پیشتاز):</span>
               <span id="shippingCost">۴۵,۰۰۰ تومان</span>
             </div>
+
             <div class="summary-row total-row">
               <span>مبلغ قابل پرداخت:</span>
               <span id="finalPrice">۰ تومان</span>
             </div>
           </div>
 
-          <!-- فرم آدرس و مشخصات گیرنده -->
-          <form
-            id="orderForm"
-            onsubmit="handlePayment(event)"
-            class="order-form"
-          >
+          <form id="orderForm" class="order-form">
             <h4>📍 اطلاعات گیرنده و آدرس ارسال</h4>
+
             <div class="form-group">
               <input
                 type="text"
                 id="custName"
                 placeholder="نام و نام خانوادگی گیرنده"
+                autocomplete="name"
                 required
               />
             </div>
+
             <div class="form-group">
               <input
                 type="tel"
                 id="custPhone"
                 placeholder="شماره موبایل (مثال: 09123456789)"
                 pattern="09[0-9]{9}"
+                autocomplete="tel"
                 required
               />
             </div>
+
             <div class="form-group">
               <input
                 type="text"
@@ -351,189 +351,442 @@
                 required
               />
             </div>
+
             <div class="form-group">
               <textarea
                 id="custAddress"
                 rows="2"
                 placeholder="آدرس دقیق پستی، پلاک و واحد"
+                autocomplete="street-address"
                 required
               ></textarea>
             </div>
+
             <div class="form-group">
               <input
                 type="text"
                 id="custPostal"
                 placeholder="کد پستی ۱۰ رقمی"
+                inputmode="numeric"
+                pattern="[0-9]{10}"
                 maxlength="10"
                 required
               />
             </div>
 
-            <!-- دکمه اتصال به درگاه بانکی -->
-            <button type="submit" class="pay-btn">
-              💳 پرداخت امن بانکی (شاپرک)
+            <button type="submit" class="pay-btn" id="payBtn">
+              💳 ادامه به درگاه پرداخت
             </button>
           </form>
         </div>
       </div>
     </div>
 
-    <!-- اسکریپت سبد خرید و درگاه پرداخت -->
+    <button
+      type="button"
+      class="back-to-top"
+      id="backToTop"
+      title="برو اول صفحه"
+      aria-label="بازگشت به بالای صفحه"
+    >
+      🚀
+    </button>
+
     <script>
-      let cart = [];
+      const cart = [];
+
       const SHIPPING_FEE = 45000;
-      const FREE_SHIPPING_LIMIT = 1000000; // بالای ۱ میلیون رایگان
+      const FREE_SHIPPING_LIMIT = 1000000;
 
-      // باز و بسته کردن مودال سبد خرید
-      function toggleCart() {
-        const modal = document.getElementById("cartModal");
-        modal.classList.toggle("active");
+      // رنگ‌های نمونه؛ data-colors هر محصول را مطابق موجودی واقعی تنظیم کن.
+      const COLOR_CODES = {
+        آبی: "#3498db",
+        قرمز: "#e74c3c",
+        طوسی: "#95a5a6",
+        صورتی: "#f78fb3",
+        سفید: "#ffffff",
+        مشکی: "#222222",
+        زرد: "#f1c40f",
+        سبز: "#2ecc71",
+        بنفش: "#9b59b6",
+        کرم: "#e7d7bd",
+      };
+
+      const cartModal = document.getElementById("cartModal");
+      const cartBtn = document.getElementById("openCartBtn");
+      const closeCartBtn = document.getElementById("closeCartBtn");
+      const cartItemsContainer = document.getElementById("cartItemsContainer");
+      const checkoutSection = document.getElementById("checkoutSection");
+      const payBtn = document.getElementById("payBtn");
+
+      // تبدیل ارقام فارسی و عربی به انگلیسی برای محاسبه قیمت
+      function normalizeDigits(text) {
+        return String(text)
+          .replace(/[۰-۹]/g, (digit) => "۰۱۲۳۴۵۶۷۸۹".indexOf(digit))
+          .replace(/[٠-٩]/g, (digit) => "٠١٢٣٤٥٦٧٨٩".indexOf(digit));
+      }
+
+      function formatPrice(amount) {
+        return amount.toLocaleString("fa-IR") + " تومان";
+      }
+
+      // جلوگیری از درج HTML ناخواسته هنگام نمایش اطلاعات در سبد
+      function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, (char) => {
+          const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+          };
+          return entities[char];
+        });
+      }
+
+      function showToast(message) {
+        const toast = document.createElement("div");
+        toast.className = "toast-alert";
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.remove();
+        }, 2500);
+      }
+
+      function openCart() {
         renderCart();
+        cartModal.classList.add("active");
+        cartModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        closeCartBtn.focus();
       }
 
-      // باز کردن سبد با کلیک روی دکمه هدر
-      document.querySelector(".cart-btn").addEventListener("click", toggleCart);
+      function closeCart() {
+        cartModal.classList.remove("active");
+        cartModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+        cartBtn.focus();
+      }
 
-      // افزودن محصول به سبد خرید
-      function addToCart(title, price, imageSrc) {
-        const existing = cart.find((item) => item.title === title);
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ title, price: parseInt(price), imageSrc, quantity: 1 });
+      cartBtn.addEventListener("click", openCart);
+      closeCartBtn.addEventListener("click", closeCart);
+
+      cartModal.addEventListener("click", (event) => {
+        if (event.target === cartModal) {
+          closeCart();
         }
-        updateCartBadge();
-        showToast(`«${title}» به سبد خرید اضافه شد! 🧸`);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && cartModal.classList.contains("active")) {
+          closeCart();
+        }
+      });
+
+      function updateCartBadge() {
+        const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartBtn.textContent = `🛍️ سبد خرید (${count.toLocaleString("fa-IR")})`;
       }
 
-      // تغییر تعداد محصول
+      // ساخت کادر سایز و رنگ برای تمام محصولات
+      document.querySelectorAll(".product-card").forEach((card) => {
+        const sizes = (card.dataset.sizes || "")
+          .split("|")
+          .map((size) => size.trim())
+          .filter(Boolean);
+
+        const colors = (card.dataset.colors || "")
+          .split("|")
+          .map((color) => color.trim())
+          .filter(Boolean);
+
+        const details = document.createElement("div");
+        details.className = "product-details";
+
+        const sizeLabel = document.createElement("label");
+        sizeLabel.className = "detail-label";
+        sizeLabel.textContent = "📏 انتخاب سایز:";
+
+        const sizeSelect = document.createElement("select");
+        sizeSelect.className = "size-dropdown";
+        sizeSelect.setAttribute("aria-label", "انتخاب سایز محصول");
+
+        const placeholder = document.createElement("option");
+        placeholder.value = "";
+        placeholder.textContent = "سایز را انتخاب کنید";
+        placeholder.selected = true;
+        placeholder.disabled = true;
+        sizeSelect.appendChild(placeholder);
+
+        sizes.forEach((size) => {
+          const option = document.createElement("option");
+          option.value = size;
+          option.textContent = size;
+          sizeSelect.appendChild(option);
+        });
+
+        sizeLabel.appendChild(sizeSelect);
+
+        const colorsBox = document.createElement("div");
+        colorsBox.className = "colors";
+
+        const colorsTitle = document.createElement("span");
+        colorsTitle.className = "detail-label";
+        colorsTitle.textContent = "🎨 انتخاب رنگ:";
+        colorsBox.appendChild(colorsTitle);
+
+        const colorChoices = document.createElement("div");
+        colorChoices.className = "color-choices";
+
+        colors.forEach((color) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "color-dot";
+          dot.dataset.color = color;
+          dot.style.backgroundColor = COLOR_CODES[color] || "#dddddd";
+          dot.title = color;
+          dot.setAttribute("aria-label", `انتخاب رنگ ${color}`);
+          dot.setAttribute("aria-pressed", "false");
+
+          dot.addEventListener("click", () => {
+            colorChoices.querySelectorAll(".color-dot").forEach((otherDot) => {
+              otherDot.classList.remove("active");
+              otherDot.setAttribute("aria-pressed", "false");
+            });
+
+            dot.classList.add("active");
+            dot.setAttribute("aria-pressed", "true");
+          });
+
+          colorChoices.appendChild(dot);
+        });
+
+        colorsBox.appendChild(colorChoices);
+        details.appendChild(sizeLabel);
+        details.appendChild(colorsBox);
+
+        // کادر اطلاعات، بیرون از دکمه و بالای قیمت قرار می‌گیرد.
+        card.querySelector(".price").before(details);
+
+        card.querySelector(".add-to-cart").addEventListener("click", () => {
+          const size = sizeSelect.value;
+          const selectedColor = colorChoices.querySelector(".color-dot.active");
+
+          if (!size) {
+            showToast("لطفاً سایز محصول را انتخاب کنید 📏");
+            sizeSelect.focus();
+            return;
+          }
+
+          if (!selectedColor) {
+            showToast("لطفاً رنگ محصول را انتخاب کنید 🎨");
+            return;
+          }
+
+          const title = card.querySelector("h3").textContent.trim();
+          const priceText = normalizeDigits(
+            card.querySelector(".price").textContent,
+          );
+          const price = Number(priceText.replace(/[^0-9]/g, ""));
+          const imageSrc = card.querySelector("img").getAttribute("src");
+          const color = selectedColor.dataset.color;
+
+          if (!Number.isSafeInteger(price) || price <= 0) {
+            showToast("قیمت این محصول درست ثبت نشده است.");
+            return;
+          }
+
+          // فقط محصولاتی با نام، قیمت، سایز و رنگ یکسان با هم جمع می‌شوند.
+          const existingItem = cart.find(
+            (item) =>
+              item.title === title &&
+              item.price === price &&
+              item.size === size &&
+              item.color === color,
+          );
+
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            cart.push({
+              title,
+              price,
+              size,
+              color,
+              imageSrc,
+              quantity: 1,
+            });
+          }
+
+          updateCartBadge();
+          showToast(`«${title}»؛ سایز ${size}، رنگ ${color} اضافه شد 🧸`);
+        });
+      });
+
       function changeQty(index, delta) {
+        if (!cart[index]) return;
+
         cart[index].quantity += delta;
+
         if (cart[index].quantity <= 0) {
           cart.splice(index, 1);
         }
-        renderCart();
+
         updateCartBadge();
+        renderCart();
       }
 
-      // به‌روزرسانی عدد سبد خرید در هدر
-      function updateCartBadge() {
-        const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-        document.querySelector(".cart-btn").innerText =
-          `🛍️ سبد خرید (${totalCount})`;
-      }
-
-      // نمایش اقلام و محاسبه هزینه‌ها
       function renderCart() {
-        const container = document.getElementById("cartItemsContainer");
-        const checkoutSec = document.getElementById("checkoutSection");
-
         if (cart.length === 0) {
-          container.innerHTML = `
-          <div class="empty-cart">
-            <p>سبد خرید شما خالی است! 🎈</p>
-          </div>`;
-          checkoutSec.style.display = "none";
+          cartItemsContainer.innerHTML = `
+            <div class="empty-cart">
+              <p>سبد خرید شما خالی است! 🎈</p>
+            </div>
+          `;
+          checkoutSection.style.display = "none";
           return;
         }
 
-        checkoutSec.style.display = "block";
-        container.innerHTML = cart
-          .map(
-            (item, idx) => `
-        <div class="cart-item">
-          <img src="${item.imageSrc}" alt="${item.title}" />
-          <div class="item-info">
-            <h5>${item.title}</h5>
-            <span class="item-price">${(item.price * item.quantity).toLocaleString("fa-IR")} تومان</span>
-          </div>
-          <div class="qty-controls">
-            <button onclick="changeQty(${idx}, 1)">+</button>
-            <span>${item.quantity}</span>
-            <button onclick="changeQty(${idx}, -1)">-</button>
-          </div>
-        </div>
-      `,
-          )
+        checkoutSection.style.display = "block";
+
+        cartItemsContainer.innerHTML = cart
+          .map((item, index) => {
+            const colorCode = COLOR_CODES[item.color] || "#dddddd";
+
+            return `
+              <div class="cart-item">
+                <img
+                  src="${escapeHtml(item.imageSrc)}"
+                  alt="${escapeHtml(item.title)}"
+                />
+
+                <div class="item-info">
+                  <h5>${escapeHtml(item.title)}</h5>
+
+                  <div class="item-variant">
+                    <span>📏 سایز: ${escapeHtml(item.size)}</span>
+                    <span>
+                      🎨 رنگ:
+                      <span
+                        class="cart-color-dot"
+                        style="background-color: ${colorCode}"
+                      ></span>
+                      ${escapeHtml(item.color)}
+                    </span>
+                  </div>
+
+                  <span class="item-price">
+                    ${formatPrice(item.price * item.quantity)}
+                  </span>
+                </div>
+
+                <div class="qty-controls">
+                  <button
+                    type="button"
+                    data-index="${index}"
+                    data-delta="1"
+                    aria-label="افزایش تعداد"
+                  >+</button>
+
+                  <span>${item.quantity.toLocaleString("fa-IR")}</span>
+
+                  <button
+                    type="button"
+                    data-index="${index}"
+                    data-delta="-1"
+                    aria-label="کاهش تعداد"
+                  >−</button>
+                </div>
+              </div>
+            `;
+          })
           .join("");
 
-        // محاسبه فاکتور
         const subtotal = cart.reduce(
           (sum, item) => sum + item.price * item.quantity,
           0,
         );
-        const isFreeShipping = subtotal >= FREE_SHIPPING_LIMIT;
-        const shipping = isFreeShipping ? 0 : SHIPPING_FEE;
+
+        const shipping = subtotal >= FREE_SHIPPING_LIMIT ? 0 : SHIPPING_FEE;
+
         const total = subtotal + shipping;
 
-        document.getElementById("subtotalPrice").innerText =
-          subtotal.toLocaleString("fa-IR") + " تومان";
-        document.getElementById("shippingCost").innerText = isFreeShipping
-          ? "رایگان 🎉"
-          : shipping.toLocaleString("fa-IR") + " تومان";
-        document.getElementById("finalPrice").innerText =
-          total.toLocaleString("fa-IR") + " تومان";
+        document.getElementById("subtotalPrice").textContent =
+          formatPrice(subtotal);
+
+        document.getElementById("shippingCost").textContent =
+          shipping === 0 ? "رایگان 🎉" : formatPrice(shipping);
+
+        document.getElementById("finalPrice").textContent = formatPrice(total);
       }
 
-      // اتصال به درگاه بانکی
-      async function handlePayment(e) {
-        e.preventDefault();
+      cartItemsContainer.addEventListener("click", (event) => {
+        const button = event.target.closest("button[data-index][data-delta]");
 
-        const customerData = {
-          name: document.getElementById("custName").value,
-          phone: document.getElementById("custPhone").value,
-          city: document.getElementById("custProvince").value,
-          address: document.getElementById("custAddress").value,
-          postal: document.getElementById("custPostal").value,
-        };
+        if (!button) return;
 
-        const response = await fetch("/api/pay", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ cart: cart, customer: customerData }),
+        changeQty(Number(button.dataset.index), Number(button.dataset.delta));
+      });
+
+      // ارسال سبد، همراه با سایز و رنگ انتخابی، به سرور
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          if (cart.length === 0) {
+            showToast("سبد خرید خالی است.");
+            return;
+          }
+
+          const customerData = {
+            name: document.getElementById("custName").value.trim(),
+            phone: document.getElementById("custPhone").value.trim(),
+            city: document.getElementById("custProvince").value.trim(),
+            address: document.getElementById("custAddress").value.trim(),
+            postal: document.getElementById("custPostal").value.trim(),
+          };
+
+          payBtn.disabled = true;
+          payBtn.textContent = "در حال اتصال به درگاه...";
+
+          try {
+            const response = await fetch("/api/pay", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                cart,
+                customer: customerData,
+              }),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok || !data.url) {
+              throw new Error(data.message || "آدرس پرداخت دریافت نشد.");
+            }
+
+            window.location.href = data.url;
+          } catch (error) {
+            console.error("Payment error:", error);
+            alert(
+              "اتصال به درگاه انجام نشد. مطمئن شوید سایت از سرور Node.js اجرا می‌شود و دوباره تلاش کنید.",
+            );
+          } finally {
+            payBtn.disabled = false;
+            payBtn.textContent = "💳 ادامه به درگاه پرداخت";
+          }
         });
 
-        const data = await response.json();
-        if (data.url) {
-          // باز شدن مستقیم درگاه شاپرک
-          window.location.href = data.url;
-        } else {
-          alert("اتصال به درگاه با خطا مواجه شد!");
-        }
-      }
-
-      // پیام نوتیفیکیشن گوشه صفحه
-      function showToast(msg) {
-        const toast = document.createElement("div");
-        toast.className = "toast-alert";
-        toast.innerText = msg;
-        document.body.appendChild(toast);
-        setTimeout(() => toast.remove(), 2500);
-      }
-
-      // دکمه‌های افزودن به سبد خرید کارت‌ها را وصل می‌کنیم
-      document.querySelectorAll(".product-card").forEach((card) => {
-        const btn = card.querySelector(".add-to-cart");
-        const title = card.querySelector("h3").innerText;
-        const priceText = card.querySelector(".price").innerText;
-        // استخراج عدد قیمت
-        const cleanPrice = priceText.replace(/[^۰-۹0-9]/g, "");
-        // تبدیل ارقام فارسی به انگلیسی برای محاسبه
-        const faToEn = (s) =>
-          s.replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
-        const numPrice = parseInt(faToEn(cleanPrice)) || 350000;
-        const imgSrc = card.querySelector("img").src;
-
-        btn.onclick = () => addToCart(title, numPrice, imgSrc);
+      document.getElementById("backToTop").addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+      updateCartBadge();
     </script>
-    <!-- دکمه شناور پرواز به اول صفحه -->
-    <button
-      class="back-to-top"
-      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      title="برو اول صفحه"
-    >
-      🚀
-    </button>
   </body>
 </html>
